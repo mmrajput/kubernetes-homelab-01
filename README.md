@@ -1,4 +1,4 @@
-# Production-Grade Kubernetes Homelab
+# Production-Grade Kubernetes Homelab [v1]
 
 [![Kubernetes](https://img.shields.io/badge/kubernetes-v1.31-blue.svg)](https://kubernetes.io/)
 [![Proxmox](https://img.shields.io/badge/proxmox-8.x-orange.svg)](https://www.proxmox.com/)
@@ -8,7 +8,18 @@
 
 > **Multi-node Kubernetes cluster built from scratch for CKA certification preparation and production infrastructure learning**
 
-A comprehensive homelab environment demonstrating enterprise-grade Kubernetes deployment, monitoring, security, and GitOps workflows. This project showcases practical DevOps/Platform Engineering skills through hands-on infrastructure implementation.
+**Part of my Kubernetes Homelab Series** - This is the foundation project focusing on core Kubernetes concepts, monitoring, and GitOps workflows on bare-metal infrastructure.
+
+## 📚 Homelab Series
+
+This is **Part 1** of my Kubernetes homelab journey:
+
+- **kubernetes-homelab-01** (This Project): Foundation - Proxmox + K8s + Monitoring
+- **kubernetes-homelab-02** (Planned): Cloud-native - Terraform + Cloud Provider
+- **kubernetes-homelab-03** (Planned): Advanced - Service Mesh + Multi-cluster
+- **kubernetes-homelab-04** (Planned): Production - Security + HA + DR
+
+Each homelab builds on learnings from previous ones while exploring new technologies and approaches.
 
 ---
 
@@ -35,7 +46,6 @@ This homelab project demonstrates production-grade Kubernetes infrastructure dep
 
 - **CKA (Certified Kubernetes Administrator) exam preparation**
 - **Hands-on learning of enterprise DevOps tools and practices**
-- **Interview portfolio showcasing real infrastructure skills**
 - **Understanding Kubernetes internals and troubleshooting**
 
 ### Why This Project?
