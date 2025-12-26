@@ -352,10 +352,14 @@ kubernetes-homelab-01/
 │       └── pod-security-standards/
 │
 ├── docs/                              # Documentation
-│   ├── architecture/
+|   ├── architecture/
 │   │   ├── architecture.md
 │   │   ├── network-design.md
 │   │   └── diagrams/
+│   │
+│   ├── decisions/
+│   │   └── phase-0-architecture.md
+│   │
 │   └── guides/
 │       ├── installation-guide.md
 │       ├── upgrade-guide.md
