@@ -176,6 +176,9 @@ Internet
 
 ### Beelink SER5 Pro Specifications
 
+![Beelink SER5 Pro](resources/images/beelink-ser5-pro.jpg)
+*My homelab server - Beelink SER5 Pro mini PC*
+
 ```yaml
 CPU:        AMD Ryzen 7 5800H
   Cores:    8 cores, 16 threads
