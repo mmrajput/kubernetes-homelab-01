@@ -35,7 +35,6 @@
 | `argocd` | ArgoCD configuration |
 | `calico` | CNI and network policies |
 | `cluster` | Cluster-wide changes |
-| `devcontainer` | Development environment |
 | `docs` | General documentation |
 | `grafana` | Grafana dashboards and config |
 | `helm` | Helm charts and values |

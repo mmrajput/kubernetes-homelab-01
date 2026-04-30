@@ -103,8 +103,7 @@ The diagram above illustrates the full platform architecture, deployed on a thre
 
 | Phase | Description | Status |
 |-------|-------------|--------|
-| Phase 0 | Architecture Design & Planning | ✅ Complete |
-| Phase 1 | Development Environment (DevContainers) | ✅ Complete |
+| Phase 1 | Architecture Design & Planning | ✅ Complete |
 | Phase 2 | Virtualization Foundation (Proxmox VE) | ✅ Complete |
 | Phase 3 | VM Provisioning (cloud-init + Ansible) | ✅ Complete |
 | Phase 4 | Kubernetes Cluster (kubeadm + Calico) | ✅ Complete |

@@ -35,7 +35,6 @@ You need a domain managed by Cloudflare. This repo uses `mmrajputhomelab.org`. R
 ### Your Workstation
 
 - Git
-- VS Code with Dev Containers extension (recommended) or Docker + devcontainer CLI
 - SSH access to the Proxmox host
 
 ---
@@ -102,14 +101,9 @@ Full guide: [`docs/guides/proxmox-installation.md`](proxmox-installation.md)
 
 ## Phase 2 — Provision Kubernetes VMs
 
-Start the devcontainer — all subsequent commands run inside it:
-
 ```bash
-# On your workstation
 git clone https://github.com/<your-fork>/kubernetes-homelab-01
 cd kubernetes-homelab-01
-# Open in VS Code and "Reopen in Container"
-# Or: ./scripts/dev-shell.sh
 ```
 
 ### 2.1 — Create the Ubuntu VM template
