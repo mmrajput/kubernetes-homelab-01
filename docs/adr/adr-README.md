@@ -21,7 +21,6 @@ Each ADR follows this structure:
 | [ADR-002](docs/adr/ADR-002-hypervisor-selection.md) | Hypervisor — Proxmox VE over bare-metal deployment |
 | [ADR-003](docs/adr/ADR-003-kubernetes-distribution.md) | Kubernetes Distribution — kubeadm over k3s/k0s |
 | [ADR-004](docs/adr/ADR-004-cni-selection.md) | CNI — Calico for full NetworkPolicy support |
-| [ADR-005](docs/adr/ADR-005-devcontainer.md) | Development Environment — DevContainer for reproducible tooling |
 | [ADR-006](docs/adr/ADR-006-gitops-tool.md) | GitOps — ArgoCD over Flux CD |
 | [ADR-007](docs/adr/ADR-007-ingress-strategy.md) | Ingress — nginx-ingress + Cloudflare Tunnel (no open ports) |
 | [ADR-008](docs/adr/ADR-008-app-of-apps-pattern.md) | GitOps Pattern — ArgoCD App-of-Apps with ApplicationSets |

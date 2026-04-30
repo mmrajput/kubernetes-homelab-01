@@ -27,7 +27,6 @@ platform/    → Everything managed by ArgoCD (GitOps)
 - SSH access to all nodes
 - GitHub repository access: `https://github.com/mmrajput/kubernetes-single-cluster`
 - Cloudflare API token (stored securely, never committed to Git)
-- Devcontainer running (`homelab-devcontainer`)
 
 ---
 
