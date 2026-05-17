@@ -22,6 +22,7 @@ All platform services are deployed and managed declaratively via ArgoCD GitOps. 
 | Promtail | promtail | 6.16.6 | monitoring | — |
 | ARC systems | gha-runner-scale-set-controller | 0.14.0 | arc-systems | — |
 | ARC runners | gha-runner-scale-set | 0.14.0 | arc-runners | — |
+| Falco | falco | 4.11.0 | falco | — |
 
 Full inventory with all endpoints: [`docs/reference/platform-inventory.md`](../docs/reference/platform-inventory.md)
 
@@ -47,7 +48,8 @@ platform/
 ├── security/
 │   ├── vault/
 │   ├── external-secrets/             # ClusterSecretStore + ExternalSecrets
-│   └── keycloak/
+│   ├── keycloak/
+│   └── falco/                        # Runtime threat detection (modern_ebpf + Falcosidekick → Loki)
 ├── data/
 │   ├── cnpg/clusters/                # CNPG PostgreSQL cluster definitions
 │   ├── longhorn/
@@ -140,4 +142,4 @@ git push
 
 ---
 
-**Last Updated:** April 2026
+**Last Updated:** May 2026
