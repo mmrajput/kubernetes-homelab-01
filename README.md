@@ -13,18 +13,6 @@
 
 ---
 
-## What's Next
-
-This repo is the **foundation**. The next iteration — [**kubernetes-multi-cluster-platform**](https://github.com/mmrajput/kubernetes-multi-cluster) — rebuilds the platform with enterprise-grade tooling:
-
-- **Talos Linux** (immutable OS, no SSH)
-- **Cilium** with eBPF, kube-proxy replacement, and Gateway API
-- **SPIFFE/SPIRE** for workload identity
-- **vCluster** for staging/production isolation
-- **ArgoCD Hub** multi-cluster GitOps
-
----
-
 ## Architecture
 
 ![Platform Architecture](docs/architecture/platform-architecture.png)
