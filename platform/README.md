@@ -22,7 +22,7 @@ All platform services are deployed and managed declaratively via ArgoCD GitOps. 
 | Promtail | promtail | 6.16.6 | monitoring | — |
 | ARC systems | gha-runner-scale-set-controller | 0.14.0 | arc-systems | — |
 | ARC runners | gha-runner-scale-set | 0.14.0 | arc-runners | — |
-| Falco | falco | 4.11.0 | falco | — |
+| Falco | falco | 8.0.5 | falco | — |
 
 Full inventory with all endpoints: [`docs/reference/platform-inventory.md`](../docs/reference/platform-inventory.md)
 
