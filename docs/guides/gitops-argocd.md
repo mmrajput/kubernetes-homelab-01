@@ -210,7 +210,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/mmrajput/kubernetes-single-cluster.git
+    repoURL: https://github.com/mmrajput/kubernetes-platform-foundation.git
     targetRevision: main
     path: platform/nginx-ingress
     helm:

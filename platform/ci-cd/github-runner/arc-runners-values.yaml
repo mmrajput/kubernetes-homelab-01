@@ -1,4 +1,4 @@
-githubConfigUrl: https://github.com/mmrajput/kubernetes-single-cluster
+githubConfigUrl: https://github.com/mmrajput/kubernetes-platform-foundation
 
 githubConfigSecret: arc-github-app-secret
 
