@@ -30,6 +30,14 @@ spec:
         - namespaceSelector:
             matchLabels:
               kubernetes.io/metadata.name: monitoring
+    # Allow Falcosidekick to push alerts to Loki
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: falco
+      ports:
+        - port: 3100
+          protocol: TCP
   egress:
     # Allow DNS resolution
     - to:
@@ -165,4 +173,3 @@ spec:
               kubernetes.io/metadata.name: falco
       ports:
         - port: 2802  # falcosidekick metrics
-          protocol: TCP
