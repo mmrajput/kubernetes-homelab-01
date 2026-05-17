@@ -21,7 +21,7 @@ resources:
 
 falco:
   json_output: true
-  log_level: info
+  log_level: debug
 
 falcosidekick:
   enabled: true
