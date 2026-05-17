@@ -1,6 +1,11 @@
 driver:
   kind: modern_ebpf
 
+# AppArmor unconfined: cri-containerd.apparmor.d (enforce) blocks BPF
+# syscalls needed by the modern_ebpf driver even for privileged containers.
+podAnnotations:
+  container.apparmor.security.beta.kubernetes.io/falco: unconfined
+
 resources:
   requests:
     cpu: 100m
