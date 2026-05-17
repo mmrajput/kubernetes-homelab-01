@@ -93,7 +93,7 @@ config:
     - Projects:
         - Kubernetes Single-cluster Platform:
             - abbr: K8S
-              href: https://mmrajput.github.io/project-portfolio/homelab/kubernetes-single-cluster/
+              href: https://mmrajput.github.io/project-portfolio/homelab/kubernetes-platform-foundation/
               description: Active
         - Kubernetes Multi-cluster Platform:
             - abbr: K8S
