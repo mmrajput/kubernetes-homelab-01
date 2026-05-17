@@ -26,6 +26,7 @@ spec:
                   rclone sync \
                     --config=/config/rclone.conf \
                     --transfers=4 \
+                    --buffer-size 8M \
                     --log-level=INFO \
                     minio:cnpg-backups onedrive:homelab-backups/cnpg-backups
                   echo "=== Sync complete ==="
@@ -44,10 +45,10 @@ spec:
               resources:
                 requests:
                   cpu: 100m
-                  memory: 64Mi
+                  memory: 128Mi
                 limits:
                   cpu: 500m
-                  memory: 256Mi
+                  memory: 512Mi
           volumes:
             - name: rclone-config
               secret:
