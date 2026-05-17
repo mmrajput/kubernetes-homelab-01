@@ -41,9 +41,9 @@ prometheus:
       limits:
         memory: 2Gi
     
-    # Retention optimized for 500GB disk
-    retention: 15d
-    retentionSize: "45GB"
+    # Retention: 7d keeps working set smaller on worker-02 (was 15d/45GB)
+    retention: 7d
+    retentionSize: "20GB"
     
     # Storage with local-path
     storageSpec:
@@ -54,6 +54,17 @@ prometheus:
             requests:
               storage: 50Gi
     
+    # Prefer not to co-locate with Loki — both are heavy and currently on worker-02
+    affinity:
+      podAntiAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchLabels:
+                  app.kubernetes.io/name: loki
+              topologyKey: kubernetes.io/hostname
+
     # Discover all ServiceMonitors
     serviceMonitorSelectorNilUsesHelmValues: false
     podMonitorSelectorNilUsesHelmValues: false
