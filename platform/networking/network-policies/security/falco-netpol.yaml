@@ -54,6 +54,10 @@ spec:
       ports:
         - port: 6443
           protocol: TCP
+    # falcoctl init container downloads rules from falcosecurity.github.io
+    - ports:
+        - port: 443
+          protocol: TCP
 ---
 # Falcosidekick: receives events from Falco, forwards to Loki, exposes metrics.
 apiVersion: networking.k8s.io/v1
