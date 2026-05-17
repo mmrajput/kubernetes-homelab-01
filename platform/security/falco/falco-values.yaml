@@ -49,13 +49,16 @@ customRules:
          container.image.repository startswith "rancher/")
 
     - rule: Write below etc
-      append: true
+      override:
+        condition: append
       condition: and not trusted_homelab_containers
 
     - rule: Read sensitive file trusted after startup
-      append: true
+      override:
+        condition: append
       condition: and not trusted_homelab_containers
 
     - rule: Launch Privileged Container
-      append: true
+      override:
+        condition: append
       condition: and not trusted_homelab_containers
