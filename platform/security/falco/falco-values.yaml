@@ -1,5 +1,5 @@
 driver:
-  kind: ebpf
+  kind: modern_ebpf
 
 resources:
   requests:
