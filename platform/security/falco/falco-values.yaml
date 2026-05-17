@@ -34,31 +34,5 @@ falcosidekick:
     labels:
       release: prometheus
 
-# Suppress noisy false-positives from known platform workloads.
-# ArgoCD, Prometheus, Longhorn, and Promtail all trigger default rules
-# (writing to /etc, reading sensitive files, running privileged) by design.
-customRules:
-  suppress-homelab.yaml: |-
-    - macro: trusted_homelab_containers
-      condition: >
-        (container.image.repository startswith "quay.io/argoproj/argocd" or
-         container.image.repository startswith "grafana/grafana" or
-         container.image.repository startswith "longhornio" or
-         container.image.repository startswith "quay.io/prometheus" or
-         container.image.repository startswith "grafana/promtail" or
-         container.image.repository startswith "rancher/")
-
-    - rule: Write below etc
-      override:
-        condition: append
-      condition: and not trusted_homelab_containers
-
-    - rule: Read sensitive file trusted after startup
-      override:
-        condition: append
-      condition: and not trusted_homelab_containers
-
-    - rule: Launch Privileged Container
-      override:
-        condition: append
-      condition: and not trusted_homelab_containers
+# Suppress rules disabled pending rule name verification against falco-rules:3.
+# Re-enable once correct rule names are confirmed from a running Falco instance.
