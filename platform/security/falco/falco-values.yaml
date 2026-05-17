@@ -1,10 +1,15 @@
 driver:
   kind: modern_ebpf
 
-# AppArmor unconfined: cri-containerd.apparmor.d (enforce) blocks BPF
-# syscalls needed by the modern_ebpf driver even for privileged containers.
+# AppArmor unconfined: cri-containerd.apparmor.d (enforce) blocks BPF syscalls.
+# Seccomp Unconfined: containerd default seccomp profile blocks BPF_MAP_TYPE_RINGBUF
+# (bpf() syscall returns EPERM inside the container even with privileged: true).
 podAnnotations:
   container.apparmor.security.beta.kubernetes.io/falco: unconfined
+
+podSecurityContext:
+  seccompProfile:
+    type: Unconfined
 
 resources:
   requests:
