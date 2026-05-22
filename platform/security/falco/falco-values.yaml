@@ -1,6 +1,16 @@
 driver:
   kind: modern_ebpf
 
+# Control plane node runs falco-ld6kx with 234+ restarts (scap_init failure).
+# modern_ebpf is unreliable on the CP node; runtime security coverage on workers is sufficient.
+affinity:
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: node-role.kubernetes.io/control-plane
+              operator: DoesNotExist
+
 # AppArmor unconfined: cri-containerd.apparmor.d (enforce) blocks BPF syscalls.
 # Seccomp Unconfined: containerd default seccomp profile blocks BPF_MAP_TYPE_RINGBUF
 # (bpf() syscall returns EPERM inside the container even with privileged: true).
